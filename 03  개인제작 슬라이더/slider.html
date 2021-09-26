@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="slider.css">
+
+    <!-- font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="title">
+        <h1>Slider</h1>
+    </header>
+    <main>
+        <div class="img-relative">
+            <ul class="img-list flex">
+                <img src="./img/img_slide6.jpeg" alt="">
+                <img src="./img/img_slide1.jpeg" alt="">
+                <img src="./img/img_slide2.jpeg" alt="">
+                <img src="./img/img_slide3.jpeg" alt="">
+                <img src="./img/img_slide4.jpeg" alt="">
+                <img src="./img/img_slide5.jpeg" alt="">
+                <img src="./img/img_slide6.jpeg" alt="">
+                <img src="./img/img_slide1.jpeg" alt="">
+            </ul>
+            <div class="icons-horizontal hidden">
+                <i class="fas fa-chevron-left left-button"></i>
+                <i class="fas fa-chevron-right right-button"></i>
+                <div class="choice-horizontal">
+                    <i class="far fa-circle choice-background"></i>
+                    <i class="far fa-circle"></i>
+                    <i class="far fa-circle"></i>
+                    <i class="far fa-circle"></i>
+                    <i class="far fa-circle"></i>
+                    <i class="far fa-circle"></i>
+                    <i class="fas fa-play play-button"></i>
+                    <i class="fas fa-pause stop-button" style="display: none;"></i>
+                </div>
+            </div>
+            <div class="icons-vertical hidden">
+                <i class="fas fa-chevron-up up-button"></i>
+                <i class="fas fa-chevron-down down-button"></i>
+                <div class="choice-vertical">
+                    <i class="far fa-circle choice-background circle1"></i>
+                    <i class="far fa-circle circle2"></i>
+                    <i class="far fa-circle circle3"></i>
+                    <i class="far fa-circle circle4"></i>
+                    <i class="far fa-circle circle5"></i>
+                    <i class="far fa-circle circle6"></i>
+                    <i class="fas fa-play play-button"></i>
+                    <i class="fas fa-pause stop-button" style="display: none; padding: 4px; border: 1px solid white;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="setting">
+            <section class="slide-direction">
+                <h4>STEP 1. 슬라이드 방향설정</h4>
+                <div class="slide-direction__button">
+                    <button class="horizontal-button">수평방향</button>
+                    <button class="vertical-button">수직방향</button>
+                </div>
+            </section>
+            <section class="slide-setting">
+                <h4>STEP 2. 슬라이드 기타설정</h4>
+                <form>
+                    <span>✓ 슬라이드의 가로넓이 :
+                        <input class="width-input" type="text" placeholder="숫자만 입력 (단위:px)">
+                        <button class="width-button" type="button">확인</button>
+                        <span>∗ 초기값 : 1000px</span>
+                    </span>
+                </form>
+                <form>
+                    <span>✓ 슬라이드의 세로높이 :
+                        <input class="height-input" type="text" placeholder="숫자만 입력 (단위:px)">
+                        <button class="height-button" type="button">확인</button>
+                        <span>∗ 초기값 : 400px</span>
+                    </span>
+                </form>
+                <form>
+                    <span>✓ 자동재생 시 속도 :
+                        <input class="speed-input" type="text" placeholder="숫자만 입력 (단위:초)">
+                        <button class="speed-button" type="button">확인</button>
+                        <span>∗ 초기값 : 2초</span>
+                    </span>
+                </form>
+                
+            </section>
+        </div>
+    </main>
+
+    <script src="slider.js"></script>
+</body>
+
+</html>

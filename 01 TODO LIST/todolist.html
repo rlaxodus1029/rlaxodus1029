@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="todolist.css">
+
+    <!-- font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=Roboto+Condensed:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+</head>
+
+<body class=" vh-100 bg-success bg-opacity-25">
+    <main class="mycss-w-px h-75 mx-auto mycss-mt-6 p-5 bg-light mycss-shadow">
+        <header class="d-flex align-items-sm-center">
+            <span class="mycss-header__date me-2"></span>
+            <div class="d-flex flex-column flex-fill">
+                <strong class="d-block mycss-header__month"></strong>
+                <span class="mycss-header__year"></span>
+            </div>
+            <span class="mycss-header__todolist">TODO LIST</span>
+        </header>
+        <div class="mt-4 d-flex">
+            <input class="w-100 mycss-input-box forjs-input-text" type="text" placeholder="추가할 할 일을 입력하세요">
+            <button class="ms-sm-2 mycss-button forjs-plus-button">
+                <svg class="mycss-plus-button" stroke="currentColor" fill="currentColor" stroke-width="0"
+                    viewBox="0 0 24 24" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+
+        <ul class="list-unstyled h-75 mt-4 mycss-list-window forjs-list-window">
+            <template class="forjs-template">
+                <li class="list-unstyled mycss-list py-3 d-flex align-items-sm-center">
+                    <label class="d-flex align-items-sm-center flex-fill forjs-label">
+                        <svg class="forjs-list-checkbox" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path>
+                            <path class="checkbox-checked checkbox-toggle" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                        </svg>
+                        <p class="mycss-list-name ps-3 forjs-list-name"></p>
+                    </label>
+                    <button class="mycss-button mycss-star-button forjs-star-button1">
+                        <svg class="forjs-star-button2" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                            height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                            <path class="forjs-star-button3"
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="ms-sm-1 mycss-button mycss-minus-button forjs-minus-button1">
+                        <svg class="forjs-minus-button2" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                            height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                            <path class="forjs-minus-button3"
+                                d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z">
+                            </path>
+                        </svg>
+                    </button>
+                </li>
+            </template>
+
+            <li class="list-unstyled mycss-list py-3 d-flex align-items-sm-center">
+                <label class="d-flex align-items-sm-center flex-fill forjs-label">
+                    <svg class="forjs-list-checkbox" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path>
+                        <path class="checkbox-checked" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                    </svg>
+                    <p class="mycss-list-name ps-3 p-checked forjs-list-name">바닐라 자바스크립트 공부하기</p>
+                </label>
+                <button class="mycss-button mycss-star-button forjs-star-button1">
+                    <svg class="forjs-star-button2" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                        height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                        <path class="forjs-star-button3"
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                        </path>
+                    </svg>
+                </button>
+                <button class="ms-sm-1 mycss-button mycss-minus-button forjs-minus-button1">
+                    <svg class="forjs-minus-button2" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                        height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                        <path class="forjs-minus-button3"
+                            d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z">
+                        </path>
+                    </svg>
+                </button>
+            </li>
+
+            <li class="list-unstyled mycss-list py-3 d-flex align-items-sm-center">
+                <label class="d-flex align-items-sm-center flex-fill forjs-label">
+                    <svg class="forjs-list-checkbox" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path>
+                        <path class="checkbox-checked" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                    </svg>
+                    <p class="mycss-list-name ps-3 p-checked forjs-list-name">홈페이지 9개 만들기</p>
+                </label>
+                <button class="mycss-button mycss-star-button forjs-star-button1">
+                    <svg class="forjs-star-button2" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                        height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                        <path class="forjs-star-button3"
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                        </path>
+                    </svg>
+                </button>
+                <button class="ms-sm-1 mycss-button mycss-minus-button forjs-star-button forjs-minus-button1">
+                    <svg class="forjs-minus-button2" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                        height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                        <path class="forjs-minus-button3"
+                            d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z">
+                        </path>
+                    </svg>
+                </button>
+            </li>
+
+            <li class="list-unstyled mycss-list py-3 d-flex align-items-sm-center">
+                <label class="d-flex align-items-sm-center flex-fill forjs-label">
+                    <svg class="forjs-list-checkbox" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path>
+                        <path class="checkbox-checked checkbox-toggle" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                    </svg>
+                    <p class="mycss-list-name ps-3 forjs-list-name">포트폴리오 만들기</p>
+                </label>
+                <button class="mycss-button mycss-star-button forjs-star-button1">
+                    <svg class="forjs-star-button2" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                        height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                        <path class="forjs-star-button3"
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                        </path>
+                    </svg>
+                </button>
+                <button class="ms-sm-1 mycss-button mycss-minus-button forjs-minus-button1">
+                    <svg class="forjs-minus-button2" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                        height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                        <path class="forjs-minus-button3"
+                            d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z">
+                        </path>
+                    </svg>
+                </button>
+            </li>
+
+        </ul>
+    </main>
+    <script src="todolist.js"></script>
+</body>
+
+</html>
